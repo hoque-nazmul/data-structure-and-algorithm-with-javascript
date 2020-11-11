@@ -10,6 +10,9 @@
 4. [Sorting Algorithm](#sorting-algorithm)
     - [Selection Sort](#selection-sort)
     - [Bubble Sort](#bubble-sort)
+5. [Data Structure](#data-structure)
+    - [Stack](#stack)
+    - [Queue](#queue)
 
 ## Time Complexity
 ```javascript
@@ -147,3 +150,76 @@ const bubbleSort = (inputArr) => {
 console.log(bubbleSort(nums)); // output: [2, 20, 22, 32, 33, 43, 87]
 ```
 **[⬆ back to top](#table-of-contents)**
+
+# Data Structure
+
+## Stack
+```javascript
+// Simple Implementation
+const stack = [];
+stack.push(42);
+stack.push(22);
+console.log(stack); // expected output: [ 42, 22 ]
+stack.pop();
+console.log(stack); // expected output: [ 42 ]
+
+// Implementing Stack using Class
+class Stack {
+    constructor () {
+        this.stack = [];
+    }
+    push (value) {
+        this.stack.push(value);
+    }
+    pop () {
+        return this.stack.pop();
+    }
+    // peek() is used for showing the last element of the Stack. Can skip it.
+    peek () {
+        return this.stack[ this.stack.length - 1 ]
+    } 
+}
+const myStack = new Stack();
+myStack.push(55);
+myStack.push(66);
+console.log(myStack); 
+//expected output: Stack Stack { stack: [ 55, 66 ] }
+myStack.pop();
+console.log(myStack); 
+// expected output: Stack { stack: [ 55 ] }
+```
+
+## Queue
+```javascript
+// Simple Implementation
+const queue = []
+queue.unshift(32);
+queue.unshift(22);
+console.log(queue); // expected output: [ 22, 32 ]
+queue.pop()
+console.log(queue);  // expected output: [ 22 ]
+
+// Implementing Queue using Class
+class Queue {
+    constructor () {
+        this.queue = [];
+    }
+    enQueue (value) {
+        this.queue.unshift(value);
+    }
+    deQueue () {
+        return this.queue.pop();
+    }
+    peek () {
+        return this.queue[this.queue.length - 1]
+    }
+}
+const myQueue = new Queue();
+myQueue.enQueue(11);
+myQueue.enQueue(22);
+console.log(myQueue); 
+//expected output: Queue { queue: [ 22, 11 ] }
+myQueue.deQueue();
+console.log(myQueue); 
+// expected output: Queue { queue: [ 22 ] }
+```
