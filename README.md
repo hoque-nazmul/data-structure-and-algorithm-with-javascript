@@ -5,6 +5,9 @@
 1. [Time Comlexity](#time-complexity)
 2. [Space complexity](#space-complexity)
 3. [Algorithm](#algorithm)
+    - [Factorial](#factorial)
+    - [Fibonacci](#fibonacci)
+    - [Prime Number](#prime-number)
     - [Linear Search](#linear-search)
     - [Binary Search](#binary-search)
     - [Selection Sort](#selection-sort)
@@ -56,6 +59,27 @@ console.log(evenNums); // output: [2, 4, 6, 8, 10]
 **[⬆ back to top](#table-of-contents)**
 
 # Algorithm
+## Factorial
+```javascript
+// Using for Loop
+const factorial = num => {
+    let factNum = 1;
+    for (let i = 1; i <= num; i++) {
+        factNum *= i;
+    }
+    return factNum;
+}
+console.log(factorial(5)); // output: 120
+
+// Using Recursive
+const factorial = num => {
+    if (num === 0) {
+        return 1;
+    }
+    return num * factorial(num - 1);
+}
+console.log(factorial(5)); // output: 120
+```
 ## Linear Search
 
 ```javascript
@@ -109,7 +133,7 @@ console.log(binarySearch(nums, 65));  // output: 3
 // Implementing Selection Sort
 const nums = [87, 43, 32, 33, 2, 20, 22];
 
-const selectionSort = (arr) => {
+const selectionSort = arr => {
     const len = arr.length;
     for (let i = 0; i < len; i++) {
         let min = i;
@@ -132,7 +156,7 @@ console.log(selectionSort(nums)) // output: [2, 20, 22, 32, 33, 43, 87]
 // Implementing Selection Sort
 const nums = [87, 43, 32, 33, 2, 20, 22];
 
-const bubbleSort = (inputArr) => {
+const bubbleSort = inputArr => {
     let len = inputArr.length;
     for (let i = 0; i < len; i++) {
 
