@@ -80,6 +80,33 @@ const factorial = num => {
 }
 console.log(factorial(5)); // output: 120
 ```
+
+## Fibonacci
+```javascript
+// Using for Loop
+const fibonacci = num => {
+    const fibo = [1, 2];
+    for (let i = 2; i < num - 1; i++) {
+        fibo[i] = fibo[i - 1] + fibo[i - 2];
+    }
+    return fibo;
+}
+console.log(fibonacci(10));
+// output: [1, 2, 3, 5, 8, 13, 21, 34, 55]
+
+// Using Recursive
+const fibonacci = num => {
+    if (num === 0) {
+        return 0;
+    }
+    if (num === 1) {
+        return 1;
+    }
+    return fibonacci(num - 1) + fibonacci(num - 2);
+}
+console.log(fibonacci(10)); // output: 55
+```
+
 ## Linear Search
 
 ```javascript
