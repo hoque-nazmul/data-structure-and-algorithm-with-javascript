@@ -4,10 +4,9 @@
 
 1. [Time Comlexity](#time-complexity)
 2. [Space complexity](#space-complexity)
-3. [Searching Algorithm](#searching-algorithm)
+3. [Algorithm](#algorithm)
     - [Linear Search](#linear-search)
     - [Binary Search](#binary-search)
-4. [Sorting Algorithm](#sorting-algorithm)
     - [Selection Sort](#selection-sort)
     - [Bubble Sort](#bubble-sort)
 5. [Data Structure](#data-structure)
@@ -56,7 +55,7 @@ console.log(evenNums); // output: [2, 4, 6, 8, 10]
 ```
 **[⬆ back to top](#table-of-contents)**
 
-# Searching Algorithm
+# Algorithm
 ## Linear Search
 
 ```javascript
@@ -105,7 +104,6 @@ console.log(binarySearch(nums, 65));  // output: 3
 ```
 **[⬆ back to top](#table-of-contents)**
 
-# Sorting Algorithm 
 ## Selection Sort
 ```javascript
 // Implementing Selection Sort
@@ -223,3 +221,4 @@ myQueue.deQueue();
 console.log(myQueue); 
 // expected output: Queue { queue: [ 22 ] }
 ```
+**[⬆ back to top](#table-of-contents)**
