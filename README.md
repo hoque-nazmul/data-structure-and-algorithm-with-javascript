@@ -4,7 +4,10 @@
 
 1. [Time Comlexity](#time-complexity)
 2. [Space complexity](#space-complexity)
-3. [Algorithm](#algorithm)
+3. [Warm up Problems](#wram-up-problems)
+    - [FizzBuzz](#fizzbuzz)
+    - [Reverse String](#reverse-string)
+4. [Algorithm](#algorithm)
     - [Factorial](#factorial)
     - [Fibonacci](#fibonacci)
     - [Check Prime Number](#check-prime-number)
@@ -55,6 +58,35 @@ for (let i = 0; i < nums.length; i++) {
     }
 }
 console.log(evenNums); // output: [2, 4, 6, 8, 10]
+```
+**[⬆ back to top](#table-of-contents)**
+
+# Warm up Problems
+## FizzBuzz
+```javascript
+const fizzBuzz = num => {
+    for (let i = 0; i < num; i++) {
+        if (i % 3 === 0 && i % 5 === 0) {
+            console.log("FizzBuzz");
+        } else if (i % 3 === 0) {
+            console.log("Fizz");
+        } else if (i % 5 === 0) {
+            console.log("Buzz");
+        } else {
+            console.log(i);
+        }
+    }
+}
+console.log(fizzBuzz(15));
+```
+
+## Reverse String 
+```javascript
+const reverseString = string => {
+    return string.split("").reverse().join("");
+}
+console.log(reverseString("Hello World"));
+// output: dlroW olleH
 ```
 **[⬆ back to top](#table-of-contents)**
 
