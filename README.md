@@ -7,7 +7,7 @@
 3. [Algorithm](#algorithm)
     - [Factorial](#factorial)
     - [Fibonacci](#fibonacci)
-    - [Prime Number](#prime-number)
+    - [Check Prime Number](#check-prime-number)
     - [Linear Search](#linear-search)
     - [Binary Search](#binary-search)
     - [Selection Sort](#selection-sort)
@@ -106,6 +106,21 @@ const fibonacci = num => {
 }
 console.log(fibonacci(10)); // output: 55
 ```
+## Check Prime Number 
+```javascript
+const checkPrime = num => { 
+    let isPrime = true;
+    for (let i = 2; i < num; i++) { 
+        if (num % i == 0) { 
+            isPrime = false;
+            break;
+        }
+    }
+    return isPrime;
+}
+console.log(checkPrime(2));
+```
+**[⬆ back to top](#table-of-contents)**
 
 ## Linear Search
 
