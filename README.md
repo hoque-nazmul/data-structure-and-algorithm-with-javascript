@@ -6,7 +6,10 @@
 2. [Space complexity](#space-complexity)
 3. [Warm up Problems](#wram-up-problems)
     - [FizzBuzz](#fizzbuzz)
+    - [Swap Variables](#swap-variables)
     - [Reverse String](#reverse-string)
+    - [Reverse Number](#reverse-number)
+    - [Remove Duplicate](#remove-duplicate)
 4. [Algorithm](#algorithm)
     - [Factorial](#factorial)
     - [Fibonacci](#fibonacci)
@@ -79,6 +82,30 @@ const fizzBuzz = num => {
 }
 console.log(fizzBuzz(15));
 ```
+## Swap Variables 
+```javascript
+let a = 10;
+let b = 20;
+let temp = a;
+a = b;
+b = temp;
+console.log(a, b); // 20 10
+
+// or 
+let x = 5;
+let y = 10;
+x = x + y;
+y = x - y;
+x = x - y;
+console.log(x, b);  // 10 5
+
+// or
+let m = 100;
+let n = 200;
+[m, n] = [n, m]
+console.log(m, n); // 200 100
+```
+**[⬆ back to top](#table-of-contents)**
 
 ## Reverse String 
 ```javascript
@@ -88,6 +115,31 @@ const reverseString = string => {
 console.log(reverseString("Hello World"));
 // output: dlroW olleH
 ```
+## Reverse Number 
+```javascript
+const reverseNumber = num => {
+    const reverse = num.toString().split('').reverse().join('');
+    return parseInt(reverse) * Math.sign(num);
+}
+console.log(reverseNumber(-20)); // output: -2
+```
+
+## Remove Duplicate
+```javascript
+const removeDuplicate = inputArr => {
+    const uniqueArr = [];
+    for (let i = 0; i < inputArr.length; i++) {
+        let element = inputArr[i];
+        if (!uniqueArr.includes(element)) {
+            uniqueArr.push(element);
+        }
+    }
+    return uniqueArr;
+}
+console.log(removeDuplicate([22, 32, 44, 22, 32]));
+// output: [22, 32, 44]
+```
+
 **[⬆ back to top](#table-of-contents)**
 
 # Algorithm
